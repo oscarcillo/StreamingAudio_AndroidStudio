@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "438791728335",
+    "firebase_url": "https://streaming-audio-tub.firebaseio.com",
+    "project_id": "streaming-audio-tub",
+    "storage_bucket": "streaming-audio-tub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438791728335:android:8c3bf8a5fcc8caf6",
+        "android_client_info": {
+          "package_name": "com.otr.streamingaudio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438791728335-3h3aatcjopn1cpuekofaa1k08oied72e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.otr.streamingaudio",
+            "certificate_hash": "661360c51abfdef4f39167dc54841f9fe1e5f9b8"
+          }
+        },
+        {
+          "client_id": "438791728335-3ud4398cre97ip7arf7thpjgf2g5rc5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTv1ZLdDYmLWDzkprp8T9KaRakeeqOkYw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438791728335-3ud4398cre97ip7arf7thpjgf2g5rc5l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
