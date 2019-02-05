@@ -28,9 +28,19 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> arrayListUrl = new ArrayList<>();
 
     public final static String URL_CANCION = "urlcancion";
+    public final static String LISTA_URLS = "listaurls";
+    public final static String POSICION = "posicion";
 
     DatabaseReference db = FirebaseDatabase.getInstance().getReference("url");
     static String URL;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        lista = findViewById(R.id.listaCanciones);
+        lista.setClickable(true);
+        lista.setEnabled(true);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         //
         lista = findViewById(R.id.listaCanciones);
+        lista.setClickable(true);
+        lista.setEnabled(true);
         //
         db.addValueEventListener(new ValueEventListener() {
             @Override
@@ -62,12 +74,18 @@ public class MainActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {}
         });
 
+
+
         //listener al hacer click en un item de la lista
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                lista.setClickable(false);
+                lista.setEnabled(false);
                 Intent i = new Intent(getApplicationContext(), SongActivity.class);
                 i.putExtra(URL_CANCION, arrayListUrl.get(position));
+                i.putExtra(LISTA_URLS, arrayListUrl);
+                i.putExtra(POSICION, position);
                 startActivity(i);
             }
         });
